@@ -1,0 +1,1 @@
+const {MongoClient} = require('mongodb');const uri = "mongodb://localhost:27017/TodoApp";MongoClient.connect(uri,(err, client) => {    const db = client.db("TodoApp");    //delete many    db.collection('todos').deleteMany();    //delete one    //findAndDelete    client.close();});
